@@ -4,6 +4,17 @@
 // all the maximum and minimum numbers of any object type
 #include <stdbool.h>
 // bool could be write as _Bool, now can use true, false
+#include <time.h>
+// used to functions supporting dated and times
+#include <errno.h>
+// reporting of errors
+#include <locale.h>
+// used to functions for formatting data
+#include <signal.h>
+// dealing with conditions during program execute, include errors
+#include <stdarg.h>
+// enable a variable number of arguments to be passed to function
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -102,6 +113,62 @@ void *malloc(size);
 // create space to put size bytes in length, spaces initiallize to zero. return pointer to begin of space
 void *realloc(pointer, size);
 // change size of previously space in bytes, return the pointer of new space
+
+
+
+// MATH FUNCTIONS --> <math.h>
+double acosh(x);
+// returns the hyperbolic arrcosine of x, x >= 1
+double asin(x);
+// x in the range [-1,1]. returns the angle in radians [-pi/2, pi/2] 
+double atan(x);
+// x in the range [-1,1]. returns the angle in radians [-pi/2, pi/2] 
+double ceil(x); // round up
+// returns as double the smallest integer value that greater than x or equal to x
+double sin(r);
+// returns the sine of r
+double cos(r);
+// returns the cosine of r
+double tan(r);
+// returns the tangent of r
+double floor(x); // round down
+// returns as double the greater integer value less than x or equal to x 
+double log(x);
+// returns the natural logarithm of x, x >= 0
+double nan(s);
+// returns NaN according to the pointer of s string, if integer than the integer
+double pow(x, y);
+// returns x^y
+double reminder(x, y);
+// returns the reminder of x divided by y
+double round(x);
+// returns the closest integer to double x (if its 0.5 than 1.0)
+double sqrt(x);
+// returns the square root of x, x >= 0
+//  And there is many more
+
+
+
+// UNTILITY FUNCTIONS --> <stdlib.h>
+int abs(n);
+// returns the absolute value of x integer
+void exit(n);
+// terminates program execution, close any open file and return result as n integer
+void *getenv(s);
+// read environment variables, returns the pointer to the value. use to get environment variables
+void qsort(arr, n, size, comp_fn);
+// sort the data in arr (a pointer). n elements each size bytes length (n,size are size_t type).
+// comp_fn is "pointer to function that returns int and that takes two void pointers as arguments"
+void rand(void);
+// returns a random number in range [0, RAND_MAX]
+void srand(seed);
+// seeds the random number generator to the unsigned int value seed
+int system(s);
+// return the system defined value of command in char array (s string)
+
+
+// --------------------------------------------------------------------------------
+
 
 
 
