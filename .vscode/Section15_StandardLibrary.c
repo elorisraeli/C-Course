@@ -149,7 +149,7 @@ double sqrt(x);
 
 
 
-// UNTILITY FUNCTIONS --> <stdlib.h>
+// UTILITY FUNCTIONS --> <stdlib.h>
 int abs(n);
 // returns the absolute value of x integer
 void exit(n);
